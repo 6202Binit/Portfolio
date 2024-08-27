@@ -4,7 +4,8 @@
     flex-direction: row;
     align-items: flex-start;
     padding: 20px;
-    background-color: rgb(20, 9, 9);
+    /* background-color: rgb(20, 9, 9); */
+    background-color: rgb(4, 4, 14);
     position: relative;
 }
 
@@ -67,7 +68,10 @@
 
 .about {
     font-size: 30px;
-    line-height: 1.5; /* Improve text readability */
+    line-height: 1.5;
+    color: white;
+    font: 500; /* Improve text readability */
+    font-style: italic;
 }
 
 .background-image {

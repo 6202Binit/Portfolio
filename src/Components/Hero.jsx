@@ -1,130 +1,31 @@
+
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
 import binitImage from './binit.png';
 
 const Hero = () => {
   return (
-    <HeroSection>
-      <div className="heroInner">
-        <span>
-          <h1>
-            <AnimatedText>
-              Hi, I'm <YellowText>Bi</YellowText>nit Ku<YellowText>ma</YellowText>r <YellowText>Jha</YellowText>
-            </AnimatedText>
+    <section className="bg-cover bg-center bg-black text-fafafc py-32 px-6">
+      <div className="flex flex-col sm:flex-row max-w-6xl mx-auto items-center justify-between">
+        <span className="max-w-full sm:max-w-1/2 text-center sm:text-left">
+          <h1 className="font-black text-2xl sm:text-[3.25rem] leading-tight mb-6">
+            <span className="animate-fade-in-up">
+              Hi, I'm <span className="text-yellow-500">Bi</span>nit Ku<span className="text-yellow-500">ma</span>r <span className="text-yellow-500">Jha</span>
+            </span>
             <br />
-            <AnimatedText>
-              Software <YellowText>Dev</YellowText>eloper
-            </AnimatedText>
+            <span className="animate-fade-in-up">
+              Software <span className="text-yellow-500">Dev</span>eloper
+            </span>
           </h1>
-          <ExploreButton href="#">
+          <a href="#" className="inline-block py-3 px-6 mt-4 text-xl font-bold text-[#0a0c2c] bg-[#f7c948] rounded-full shadow-md hover:bg-[#f7b100] transition transform hover:-translate-y-1 hover:shadow-lg">
             Explore Now
-          </ExploreButton>
+          </a>
         </span>
-        <ImageContainer>
-          <img src={binitImage} alt="Binit Kumar Jha" />
-        </ImageContainer>
+        <div className="mt-8 sm:mt-0 flex justify-center items-center w-[200px] h-[200px] sm:w-[700px] sm:h-[700px] overflow-hidden rounded-full">
+          <img src={binitImage} alt="Binit Kumar Jha" className="w-full h-full object-cover" />
+        </div>
       </div>
-    </HeroSection>
+    </section>
   );
 };
-
-const HeroSection = styled.section`
-  background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent 10rem),
-    url(https://images.pexels.com/photos/133325/pexels-photo-133325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=600&dpr=1);
-  background-position: center, bottom left;
-  background-size: cover, cover;
-  height: fit-content;
-  color: #fafafc;
-  padding: 15rem 3rem 6rem;
-  .heroInner {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: space-between;
-  }
-  span {
-    max-width: 50%;
-  }
-  h1 {
-    font-weight: 900;
-    font-size: clamp(2rem, 5.5vw, 3.25rem);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
-  @media (max-width: 576px) {
-    background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent),
-      url(${binitImage});
-    background-position: center, bottom left;
-    background-size: cover, cover;
-    align-items: flex-start;
-    padding-top: 7.5rem;
-    height: 75vh;
-    max-height: 720px;
-    .heroInner {
-      flex-direction: column;
-    }
-    span {
-      max-width: 100%;
-      text-align: center;
-    }
-    img {
-      margin-top: 1.5rem;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  }
-`;
-
-const AnimatedText = styled.span`
-  animation: ${keyframes`
-    0% {
-      opacity: 0;
-      transform: translateY(-100px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  `} 2s ease-in-out;
-`;
-
-const ImageContainer = styled.div`
-  margin-top: -150px;
-  margin-right: 5px;
-  width: 700px;
-  height: 700px;
-  overflow: hidden;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const YellowText = styled.span`
-  color: yellow;
-`;
-
-const ExploreButton = styled.a`
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #0a0c2c;
-  background-color: #f7c948;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  &:hover {
-    background-color: #f7b100;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  }
-`;
 
 export default Hero;

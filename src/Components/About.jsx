@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './About.css';
-import binitImage from './binit.png';
+import binitImage from './Img.jpeg';
 
 const About = () => {
   return (
@@ -20,10 +20,10 @@ const About = () => {
             Maulana Abul Kalam Azad University of Technology, West Bengal (2021-2025)
           </p>
           <p className="education-details">
-            12th Grade - [MLSM College Darbhanga]
+            12th  - [MLSM College Darbhanga]
           </p>
           <p className="education-details">
-            10th Grade - [+2 B.K.S High School]
+            10th - [+2 B.K.S High School]
           </p>
         </div>
       </div>
